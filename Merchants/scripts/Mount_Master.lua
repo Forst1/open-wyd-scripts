@@ -2,12 +2,12 @@ function OnUse(npc, player, confirm)
 	
 	local mount = player:getMount();
 	if (mount:isBetween(2330, 2390) == false) then
-		iSend.Say(npc, "Você não possui uma montaria valida.");
+		iSend.Say(npc, "Vocꡮ䯠possui uma montaria v⭩da equipada.");
 		return;
 	end
 	
 	if (mount:getValue(0) > 0) then
-		iSend.Say(npc, "A montaria ainda está viva!");
+		iSend.Say(npc, "A montaria ainda estᡶiva!");
 		return;
 	end
 	
@@ -16,7 +16,7 @@ function OnUse(npc, player, confirm)
 	local coin = player:getCoin();
 	
 	if (coin == 0) then
-		iSend.Say(npc, "Para reviver ["..itemAttr:getName().."] sera necessario "..price.." de gold.");
+		iSend.Say(npc, "Para reviver ["..itemAttr:getName().."] 顮ecessario "..price.." de gold.");
 		return;
 	end
 	
@@ -41,7 +41,7 @@ function OnUse(npc, player, confirm)
 		mount:setMountLife(vitality);
 		mount:setMountFeed(5);
 	else
-		iSend.Say(npc, "Desculpe, nao pude salva-lo.");
+		iSend.Say(npc, "Desculpe, n䯠pude salvᮬo.");
 		mount:reset();
 	end
 	
